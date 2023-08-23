@@ -1,0 +1,36 @@
+﻿@page "/"
+@inject VisitorWorkflowManager WorkflowManager
+<PageTitle>Index</PageTitle>
+
+<h1>Visitor Workflow Demo</h1>
+
+<div class="mb-3 text-end">
+    @foreach (var action in WorkflowManager.GetActionsForState() )
+    {
+        <button class="btn btn-primary ms-1" @onclick="() => DispatchProcess(action.ActionType)" >@action.Name</button>
+    }
+</div>
+<div class="bg-dark text-white m-2 p-1">
+    <pre class="ps-2">Name : @WorkflowManager.Context.Name</pre>
+    <pre class="ps-2">State : @WorkflowManager.Context.EntityState.StateCode.Title</pre>
+    <pre class="ps-2">On Site : @WorkflowManager.Context.OnSite</pre>
+    <pre class="ps-2">Off Site : @WorkflowManager.Context.OffSite</pre>
+</div>
+
+<div class="bg-dark text-white m-2 p-1">
+    @foreach(var log in WorkflowManager.Logs)
+    {
+        <pre class="ps-2">@GetLogText(log)</pre>
+    }
+</div>
+
+@code {
+    protected async override Task OnInitializedAsync()
+        => await this.WorkflowManager.LoadAsync(Guid.Empty);
+
+    private async Task DispatchProcess(Type process)
+        => await this.WorkflowManager.DispatchProcess(process);   
+
+    private string GetLogText(WorkflowLog log)
+        => $"{log.TimeStamp.DateTime.ToLongTimeString()} - {log.InitialState.Title} -> {log.FinalState.Title} - {log.Log}";
+}

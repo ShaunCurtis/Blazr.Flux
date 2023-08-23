@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{C1D2AD80-3BA6-4A12-A5C5-7CC80E469917}"
+	ProjectSection(SolutionItems) = preProject
+		Notes\Basics.md = Notes\Basics.md
+		Notes\Data.md = Notes\Data.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{87EC319C-A724-4B97-BEC2-60A30E63BD60}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazr.Flux", "Blazr.Flux\Blazr.Flux.csproj", "{AF264DAC-20E6-4AD9-8D1E-CD2F7297981E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazr.Flux.Web", "Blazr.Flux.Web\Blazr.Flux.Web.csproj", "{AB43AE5C-7789-4628-9D17-F0FFE065BD51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF264DAC-20E6-4AD9-8D1E-CD2F7297981E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF264DAC-20E6-4AD9-8D1E-CD2F7297981E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF264DAC-20E6-4AD9-8D1E-CD2F7297981E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF264DAC-20E6-4AD9-8D1E-CD2F7297981E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB43AE5C-7789-4628-9D17-F0FFE065BD51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB43AE5C-7789-4628-9D17-F0FFE065BD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB43AE5C-7789-4628-9D17-F0FFE065BD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB43AE5C-7789-4628-9D17-F0FFE065BD51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCFBDD43-7B05-4F6E-85F2-C3AEB20071C9}
+	EndGlobalSection
+EndGlobal
